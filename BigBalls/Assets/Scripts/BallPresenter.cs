@@ -1,11 +1,13 @@
 using System;
 using UnityEngine;
+using Zenject;
 
 public class BallPresenter : IDisposable
 {
     private readonly BallView _ballView;
     private readonly BallModel _ballModel;
 
+    [Inject]
     public BallPresenter(BallView ballView, BallModel ballModel)
     {
         _ballView = ballView;
